@@ -4,14 +4,29 @@ import React, {Component} from "react"
 class MemeGenerator extends Component{
   constructor(){
     super()
-    this.state = {}
+    this.state = {
+      quote: ""
+    }
   }
+
+  componentDidMount(){
+    fetch("https://api.quotable.io/random")
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          quote: data
+        })
+        console.log(data)
+  })
+}
 
 
   render(){
-    <div>
-
-    <div>
+    return(
+      <div>
+        {this.state.quote.content}
+      </div>
+    )
   }
 }
 
