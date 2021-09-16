@@ -12,9 +12,28 @@
 
 body{
   margin: 0 auto;
-  width: 90%;
 }
 
 h1,h2,h3,p{
   margin: 0;
+}
+
+
+/* header */
+header{
+  background-image: linear-gradient(#a834eb, #581c7a);
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4em;
+}
+header img{
+  max-width: 70px;
+}
+
+header p{
+  font-size: 48px;
+  text-transform: uppercase;
+  color: white;
 }
