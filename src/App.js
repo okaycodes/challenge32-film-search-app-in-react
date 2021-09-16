@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import MainContent from "./MainContent"
+import MemeGenerator from "./components/MemeGenerator"
 import Header from './components/Header'
 import Footer from './components/Footer'
 
@@ -8,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <MainContent />
+      <MemeGenerator />
       <Footer />
     </div>
   );
