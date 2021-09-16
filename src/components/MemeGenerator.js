@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 
 
-class MainContent extends Component{
+class MemeGenerator extends Component{
   constructor(){
     super()
     this.state = {}
@@ -15,4 +15,4 @@ class MainContent extends Component{
   }
 }
 
-export default MainContent
+export default MemeGenerator
