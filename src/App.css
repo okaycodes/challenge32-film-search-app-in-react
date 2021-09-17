@@ -21,13 +21,14 @@ h1,h2,h3,p{
 
 /* header */
 header{
-  background-image: linear-gradient(#a834eb, #581c7a);
+  background-image: linear-gradient(to left,#a834eb, #581c7a);
   padding: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4em;
 }
+
 header img{
   max-width: 70px;
 }
