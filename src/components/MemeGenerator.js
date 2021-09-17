@@ -12,6 +12,13 @@ class MemeGenerator extends Component{
     }
   }
 
+  handleChange(event){
+    const {name, value} = event.target
+    this.setState({
+      [name]: value
+    })
+  }
+
   componentDidMount(){
     fetch("https://api.imgflip.com/get_memes")
       .then(response => response.json())
@@ -23,8 +30,9 @@ class MemeGenerator extends Component{
           })
         })
         console.log(data.data.memes)
-  })
-}
+      })
+  }
+
 
 
   render(){
