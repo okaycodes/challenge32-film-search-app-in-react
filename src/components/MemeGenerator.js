@@ -30,11 +30,27 @@ class MemeGenerator extends Component{
   render(){
     const memePics = this.state.allMemeImages.map(item =>{
       return (<img src={item.url} alt="" />)
-    }).slice(0, 10)
+    }).slice(0, 1)
 
     return(
       <div>
         {memePics}
+
+        <form>
+          <input
+          type="text"
+          name="topText"
+          value= {this.state.topText}
+          onChange = {this.handleChange}
+          />
+
+          <input
+          type="text"
+          name="bottomText"
+          value= {this.state.bottomText}
+          onChange = {this.handleChange}
+          />
+        </form>
       </div>
     )
   }
