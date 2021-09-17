@@ -5,18 +5,24 @@ class MemeGenerator extends Component{
   constructor(){
     super()
     this.state = {
-      quote: ""
+      topText: "",
+      bottomText: "",
+      randomImage: "http://i.imgflip.com/1bij.jpg",
+      allMemeImages: ""
     }
   }
 
   componentDidMount(){
-    fetch("https://api.quotable.io/random")
+    fetch("https://api.imgflip.com/get_memes")
       .then(response => response.json())
       .then(data => {
-        this.setState({
-          quote: data
+        this.setState(prevState => {
+          return ({
+          ...prevState,
+          allMemeImages: data.memes
+          })
         })
-        console.log(data)
+        console.log(data.memes)
   })
 }
 
@@ -24,7 +30,7 @@ class MemeGenerator extends Component{
   render(){
     return(
       <div>
-        {this.state.quote.content}
+        {this.state.allMemeImages}
       </div>
     )
   }
