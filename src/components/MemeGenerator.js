@@ -30,7 +30,7 @@ class MemeGenerator extends Component{
   render(){
     const memePics = this.state.allMemeImages.map(item =>{
       return (<img src={item.url} alt="" />)
-    })
+    }).slice(0, 10)
 
     return(
       <div>
