@@ -30,7 +30,6 @@ class MemeGenerator extends Component{
           allMemeImages: data.data.memes
           })
         })
-        console.log(data.data.memes)
       })
   }
 
