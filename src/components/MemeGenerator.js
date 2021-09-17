@@ -8,7 +8,7 @@ class MemeGenerator extends Component{
       topText: "",
       bottomText: "",
       randomImage: "http://i.imgflip.com/1bij.jpg",
-      allMemeImages: ""
+      allMemeImages: []
     }
   }
 
@@ -19,18 +19,22 @@ class MemeGenerator extends Component{
         this.setState(prevState => {
           return ({
           ...prevState,
-          allMemeImages: data.memes
+          allMemeImages: data.data.memes
           })
         })
-        console.log(data.memes)
+        console.log(data.data.memes)
   })
 }
 
 
   render(){
+    const memePics = this.state.allMemeImages.map(item =>{
+      return (<img src={item.url} alt="" />)
+    })
+
     return(
       <div>
-        {this.state.allMemeImages}
+        {memePics}
       </div>
     )
   }
