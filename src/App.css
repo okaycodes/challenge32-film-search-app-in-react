@@ -38,3 +38,13 @@ header p{
   text-transform: uppercase;
   color: white;
 }
+
+.memes{
+  width: 90%;
+  max-width: 400px;
+  color: white;
+}
+
+.memes img{
+  width: 100%;
+}
