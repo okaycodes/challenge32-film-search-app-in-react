@@ -24,13 +24,8 @@ class MemeGenerator extends Component{
     fetch("https://api.imgflip.com/get_memes")
       .then(response => response.json())
       .then(data => {
-        this.setState(prevState => {
-          return ({
-          ...prevState,
-          allMemeImages: data.data.memes
-          })
-        })
-      })
+        this.setState({allMemeImages: data.data.memes})
+    })
   }
 
 
