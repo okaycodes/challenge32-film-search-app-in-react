@@ -38,9 +38,9 @@ class MemeGenerator extends Component{
   render(){
     const memePics = this.state.allMemeImages.map(item =>{
       return (<img src={item.url} alt="" />)
-    }).slice(0, 1)
+    })
 
-    const random = Math.floor(Math.random() * this.allMemeImages.length)
+    const random = Math.floor(Math.random() * this.state.allMemeImages.length)
 
     return(
       <div>
@@ -64,8 +64,10 @@ class MemeGenerator extends Component{
           <button type="submit" onSubmit={this.handleSubmit}>GEN</button>
         </form>
 
-        <div className="memes">
+        <div className="meme">
+          <div className="meme__pic">
           {memePics[random]}
+          </div>
         </div>
       </div>
     )
