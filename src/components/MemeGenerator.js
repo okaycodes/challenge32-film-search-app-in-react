@@ -42,8 +42,6 @@ class MemeGenerator extends Component{
 
     return(
       <div>
-        {memePics}
-
         <form>
           <input
           type="text"
@@ -61,8 +59,12 @@ class MemeGenerator extends Component{
           placeholder = "bottom text"
           />
 
-          <button type="submit" onSubmit={this.handleSubmit}>SUBMIT</button>
+          <button type="submit" onSubmit={this.handleSubmit}>GEN</button>
         </form>
+
+        <div className="memes">
+          {memePics}
+        </div>
       </div>
     )
   }
