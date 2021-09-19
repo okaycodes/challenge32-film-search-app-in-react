@@ -40,6 +40,8 @@ class MemeGenerator extends Component{
       return (<img src={item.url} alt="" />)
     }).slice(0, 1)
 
+    const random = Math.floor(Math.random() * this.allMemeImages.length)
+
     return(
       <div>
         <form>
@@ -63,7 +65,7 @@ class MemeGenerator extends Component{
         </form>
 
         <div className="memes">
-          {memePics}
+          {memePics[random]}
         </div>
       </div>
     )
