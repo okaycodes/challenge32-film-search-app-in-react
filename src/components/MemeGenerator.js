@@ -30,7 +30,6 @@ class MemeGenerator extends Component{
   }
 
 
-
   render(){
     const memePics = this.state.allMemeImages.map(item =>{
       return (<img src={item.url} alt="" />)
@@ -54,6 +53,8 @@ class MemeGenerator extends Component{
           value= {this.state.bottomText}
           onChange = {this.handleChange}
           />
+
+          <button type="submit" onSubmit={this.handleSubmit}></button>
         </form>
       </div>
     )
