@@ -29,7 +29,7 @@ header{
   gap: 4em;
 }
 
-img{
+header img{
   max-width: 70px;
 }
 
@@ -39,12 +39,12 @@ header p{
   color: white;
 }
 
-.memes{
-  width: 90%;
+.meme{
   max-width: 400px;
   color: white;
+  border: red solid;
 }
 
-.memes img{
-  width: 100%;
+.meme__pic{
+  width: 400px;
 }
