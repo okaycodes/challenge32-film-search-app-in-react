@@ -22,6 +22,10 @@ class MemeGenerator extends Component{
   }
 
   handleSubmit(event){
+    const memeUrls = this.state.allMemeImages.map(item => item.url)
+    const random = Math.floor(Math.random() * this.state.memeUrls.length)
+
+    this.setState({randomImage: memeUrls[random]})
 
   }
 
@@ -36,11 +40,6 @@ class MemeGenerator extends Component{
 
 
   render(){
-    const memePics = this.state.allMemeImages.map(item =>{
-      return (<img src={item.url} alt="" />)
-    })
-
-    const random = Math.floor(Math.random() * this.state.allMemeImages.length)
 
     return(
       <div>
