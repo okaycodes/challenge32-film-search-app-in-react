@@ -10,8 +10,6 @@ class MemeGenerator extends Component{
       randomImage: "http://i.imgflip.com/1bij.jpg",
       allMemeImages: []
     }
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleChange = (event) =>{
