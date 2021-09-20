@@ -14,14 +14,14 @@ class MemeGenerator extends Component{
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleChange(event){
+  handleChange = (event) =>{
     const {name, value} = event.target
     this.setState({
       [name]: value
     })
   }
 
-  handleSubmit(event){
+  handleSubmit = (event) => {
     event.preventDefault();
     const memeUrls = this.state.allMemeImages.map(item => item.url)
     const random = Math.floor(Math.random() * this.state.allMemeImages.length)
