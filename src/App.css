@@ -7,11 +7,12 @@
 }
 
 :root{
-
+  --primary-font: sans-serif;
 }
 
 body{
   margin: 0 auto;
+  font-family: var(--primary-font)
 }
 
 h1,h2,h3,p{
@@ -63,6 +64,7 @@ header p{
 .meme .top{
   grid-column: 1/5;
   grid-row: 1/2;
+  align-self: start;
 }
 
 .meme .bottom{
